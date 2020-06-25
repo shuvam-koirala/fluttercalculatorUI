@@ -8,13 +8,14 @@ class CalculatorWhiteUI extends StatefulWidget {
 }
 
 class _CalculatorWhiteUIState extends State<CalculatorWhiteUI> {
-  Color textColor1 =Colors.blueAccent;
+  Color textColor1 =Color(0xff4D12F5);
   Color textColor2 =Colors.black;
    List input=[2,"+",2];
    List result=[4];
   Widget circle (Widget buttons){
     return NeumorphicButton
                ( 
+                 duration: Duration(milliseconds: 350 ),
                  provideHapticFeedback: true,
                  onPressed: (){},
                  style: NeumorphicStyle
@@ -22,11 +23,11 @@ class _CalculatorWhiteUIState extends State<CalculatorWhiteUI> {
             shape:NeumorphicShape.convex,
             boxShape: NeumorphicBoxShape.circle(),
             lightSource: LightSource.topLeft,
-            intensity: 0.70,
-            depth:5,
-            color: Color(0xffffffff),
-              shadowLightColor:Color(0xffffffff) ,
-            shadowDarkColor: Colors.grey,
+            intensity: 10,
+            depth:15,
+            color: Color(0xffECF0F3),
+              shadowLightColor:NeumorphicColors.decorationMaxWhiteColor ,
+            shadowDarkColor: Colors.grey[400],
            ) ,
                  child:buttons,
                );
@@ -35,7 +36,7 @@ class _CalculatorWhiteUIState extends State<CalculatorWhiteUI> {
   Widget build(BuildContext context) {
     return 
            Scaffold(
-             backgroundColor:NeumorphicColors.decorationMaxWhiteColor,
+             backgroundColor:Color(0xffECF0F3),
              body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column
@@ -63,7 +64,7 @@ class _CalculatorWhiteUIState extends State<CalculatorWhiteUI> {
                 lightSource: LightSource.topLeft,
                 intensity: 0.70,
                 depth:-5,
-                color: Color(0xffffffff),
+                color: Color(0xffECF0F3),
               ),
               child:Container
               (
@@ -262,7 +263,7 @@ class _CalculatorWhiteUIState extends State<CalculatorWhiteUI> {
                      [
                circle(
                       Icon(
-                        Icons.cancel,color:textColor1,
+                        Icons.backspace,color:textColor1,
                         )
                         ),
                  circle(
@@ -277,17 +278,18 @@ class _CalculatorWhiteUIState extends State<CalculatorWhiteUI> {
                         ),
                 NeumorphicButton
                      ( 
+                       duration: Duration(milliseconds: 350 ),
               onPressed: (){},
               style: NeumorphicStyle
                 ( 
                   shape:NeumorphicShape.convex,
-                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(10)),
+                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(25)),
                   lightSource: LightSource.topLeft,
-                  intensity: 0.70,
-                  depth:5,
-                  color: Colors.deepPurple,
-                    shadowLightColor:Color(0xffffffff) ,
-                  shadowDarkColor: Colors.grey,
+                   intensity: 20,
+                    depth:25,
+                  color: Color(0xff4D12F5),
+                    shadowLightColor:NeumorphicColors.decorationMaxWhiteColor ,
+                  shadowDarkColor: Colors.grey[400],
                  ) ,
               child:Container
               (

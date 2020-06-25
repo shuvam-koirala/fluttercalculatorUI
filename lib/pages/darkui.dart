@@ -7,27 +7,28 @@ class CalculatorDarkUI extends StatefulWidget {
 }
 
 class _CalculatorDarkUIState extends State<CalculatorDarkUI> {
-  Color textColor1 =Colors.yellow;
+  Color textColor1 =Color(0xffFFAB08);
   Color textColor2 =Colors.white;
-   Color textColor3 =Colors.black;
+
    List input=[2,"+",2];
    List result=[4];
  
   Widget circle (Widget buttons){
     return NeumorphicButton
                ( 
+                 duration: Duration(milliseconds: 350 ),
                  provideHapticFeedback: true,
                  onPressed: (){},
                  style: NeumorphicStyle
           ( 
             shape:NeumorphicShape.convex,
             boxShape: NeumorphicBoxShape.circle(),
-            lightSource: LightSource.topLeft,
-            intensity: 0.70,
-            depth:5,
-            color: textColor3,
-              shadowLightColor:textColor3 ,
-            shadowDarkColor: Colors.grey,
+            lightSource: LightSource.bottomRight,
+            intensity: 10,
+            depth:15,
+            color: Color(0xff1C1C1C),
+              shadowLightColor:Color(0xff080808) ,
+            shadowDarkColor: Color(0xff292929),
            ) ,
                  child:buttons,
                );
@@ -36,7 +37,7 @@ class _CalculatorDarkUIState extends State<CalculatorDarkUI> {
   Widget build(BuildContext context) {
     return
             Scaffold(
-            backgroundColor:NeumorphicColors.decorationMaxDarkColor,
+            backgroundColor:Color(0xff1C1C1C),
             body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column
@@ -64,7 +65,7 @@ class _CalculatorDarkUIState extends State<CalculatorDarkUI> {
                 oppositeShadowLightSource: true,
                 intensity: 0.70,
                 depth:-5,
-                color: textColor3,
+                color: Color(0xff1C1C1C),
               ),
               child:Container
               (
@@ -108,7 +109,7 @@ class _CalculatorDarkUIState extends State<CalculatorDarkUI> {
                   children: 
                   [
                    Row
-                          (//mainAxisSize: MainAxisSize.values[],
+                          (
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: 
                             [
@@ -278,17 +279,19 @@ class _CalculatorDarkUIState extends State<CalculatorDarkUI> {
                         ),
                 NeumorphicButton
                      ( 
+              duration: Duration(milliseconds: 350 ),
               onPressed: (){},
               style: NeumorphicStyle
                 ( 
+                  
                   shape:NeumorphicShape.convex,
-                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(10)),
+                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(25)),
                   lightSource: LightSource.bottomRight,
-                  intensity: 0.70,
-                  depth:5,
-                  color: Colors.deepPurple,
-                    shadowLightColor:Color(0xffffffff) ,
-                  shadowDarkColor: Colors.grey,
+                  intensity:20,
+                  depth:25,
+                  color: Color(0xffFFAB08),
+                    shadowLightColor: Color(0xff080808),
+                  shadowDarkColor:   Color(0xff292929),
                  ) ,
               child:Container
               (
@@ -299,7 +302,7 @@ class _CalculatorDarkUIState extends State<CalculatorDarkUI> {
                   (
                     "=",style: TextStyle
                     (
-                      color:Colors.white,
+                      color:Colors.black,
                       fontSize: 20
                       ),
                   ),
