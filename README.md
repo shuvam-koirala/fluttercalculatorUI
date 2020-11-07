@@ -16,9 +16,11 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Here are some of the screenshots for you
+## Screenshot 1
 <img src="calculator1.jpg"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
+## Screenshot 2
 <img src="calculator2.jpg"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />     
